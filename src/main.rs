@@ -1,8 +1,7 @@
-use tokio;
 
 use zero2prod::run;
 
-#[tokio::main]
-async fn main() -> Result<(), std::io::Error> {
-    run().await
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    run()?.await
 }
